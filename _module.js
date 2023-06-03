@@ -2925,7 +2925,7 @@ function get_each_context_1(ctx, list, i) {
 	return child_ctx;
 }
 
-// (104:31) 
+// (105:31) 
 function create_if_block_4(ctx) {
 	let img;
 	let img_src_value;
@@ -2962,7 +2962,7 @@ function create_if_block_4(ctx) {
 	};
 }
 
-// (102:6) {#if logo.title}
+// (103:6) {#if logo.title}
 function create_if_block_3(ctx) {
 	let t_value = /*logo*/ ctx[0].title + "";
 	let t;
@@ -2986,7 +2986,7 @@ function create_if_block_3(ctx) {
 	};
 }
 
-// (109:6) {#each site_nav as { link }}
+// (110:6) {#each site_nav as { link }}
 function create_each_block_1(ctx) {
 	let a;
 	let t_value = /*link*/ ctx[6].label + "";
@@ -3027,7 +3027,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (118:31) 
+// (119:31) 
 function create_if_block_2(ctx) {
 	let img;
 	let img_src_value;
@@ -3064,7 +3064,7 @@ function create_if_block_2(ctx) {
 	};
 }
 
-// (116:6) {#if logo.title}
+// (117:6) {#if logo.title}
 function create_if_block_1$1(ctx) {
 	let t_value = /*logo*/ ctx[0].title + "";
 	let t;
@@ -3088,7 +3088,7 @@ function create_if_block_1$1(ctx) {
 	};
 }
 
-// (128:4) {#if mobileNavOpen}
+// (129:4) {#if mobileNavOpen}
 function create_if_block$1(ctx) {
 	let nav;
 	let t;
@@ -3221,7 +3221,7 @@ function create_if_block$1(ctx) {
 	};
 }
 
-// (130:8) {#each site_nav as { link }}
+// (131:8) {#each site_nav as { link }}
 function create_each_block(ctx) {
 	let a;
 	let t_value = /*link*/ ctx[6].label + "";
@@ -3266,16 +3266,20 @@ function create_fragment$2(ctx) {
 	let div2;
 	let header;
 	let div0;
-	let a0;
+	let img;
+	let img_src_value;
+	let img_alt_value;
 	let t0;
-	let nav;
+	let a0;
 	let t1;
+	let nav;
+	let t2;
 	let div1;
 	let a1;
-	let t2;
+	let t3;
 	let button;
 	let icon;
-	let t3;
+	let t4;
 	let current;
 	let mounted;
 	let dispose;
@@ -3314,23 +3318,25 @@ function create_fragment$2(ctx) {
 			div2 = element("div");
 			header = element("header");
 			div0 = element("div");
+			img = element("img");
+			t0 = space();
 			a0 = element("a");
 			if (if_block0) if_block0.c();
-			t0 = space();
+			t1 = space();
 			nav = element("nav");
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				each_blocks[i].c();
 			}
 
-			t1 = space();
+			t2 = space();
 			div1 = element("div");
 			a1 = element("a");
 			if (if_block1) if_block1.c();
-			t2 = space();
+			t3 = space();
 			button = element("button");
 			create_component(icon.$$.fragment);
-			t3 = space();
+			t4 = space();
 			if (if_block2) if_block2.c();
 			this.h();
 		},
@@ -3343,11 +3349,13 @@ function create_fragment$2(ctx) {
 			var header_nodes = children(header);
 			div0 = claim_element(header_nodes, "DIV", { class: true });
 			var div0_nodes = children(div0);
+			img = claim_element(div0_nodes, "IMG", { src: true, alt: true });
+			t0 = claim_space(div0_nodes);
 			a0 = claim_element(div0_nodes, "A", { href: true, class: true });
 			var a0_nodes = children(a0);
 			if (if_block0) if_block0.l(a0_nodes);
 			a0_nodes.forEach(detach);
-			t0 = claim_space(div0_nodes);
+			t1 = claim_space(div0_nodes);
 			nav = claim_element(div0_nodes, "NAV", { class: true });
 			var nav_nodes = children(nav);
 
@@ -3357,19 +3365,19 @@ function create_fragment$2(ctx) {
 
 			nav_nodes.forEach(detach);
 			div0_nodes.forEach(detach);
-			t1 = claim_space(header_nodes);
+			t2 = claim_space(header_nodes);
 			div1 = claim_element(header_nodes, "DIV", { class: true });
 			var div1_nodes = children(div1);
 			a1 = claim_element(div1_nodes, "A", { href: true, class: true });
 			var a1_nodes = children(a1);
 			if (if_block1) if_block1.l(a1_nodes);
 			a1_nodes.forEach(detach);
-			t2 = claim_space(div1_nodes);
+			t3 = claim_space(div1_nodes);
 			button = claim_element(div1_nodes, "BUTTON", { id: true, "aria-label": true });
 			var button_nodes = children(button);
 			claim_component(icon.$$.fragment, button_nodes);
 			button_nodes.forEach(detach);
-			t3 = claim_space(div1_nodes);
+			t4 = claim_space(div1_nodes);
 			if (if_block2) if_block2.l(div1_nodes);
 			div1_nodes.forEach(detach);
 			header_nodes.forEach(detach);
@@ -3378,6 +3386,8 @@ function create_fragment$2(ctx) {
 			this.h();
 		},
 		h() {
+			if (!src_url_equal(img.src, img_src_value = /*logo*/ ctx[0].image.url)) attr(img, "src", img_src_value);
+			attr(img, "alt", img_alt_value = /*logo*/ ctx[0].image.alt);
 			attr(a0, "href", "/");
 			attr(a0, "class", "logo svelte-1grguq5");
 			attr(nav, "class", "svelte-1grguq5");
@@ -3397,9 +3407,11 @@ function create_fragment$2(ctx) {
 			append_hydration(div3, div2);
 			append_hydration(div2, header);
 			append_hydration(header, div0);
+			append_hydration(div0, img);
+			append_hydration(div0, t0);
 			append_hydration(div0, a0);
 			if (if_block0) if_block0.m(a0, null);
-			append_hydration(div0, t0);
+			append_hydration(div0, t1);
 			append_hydration(div0, nav);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -3408,14 +3420,14 @@ function create_fragment$2(ctx) {
 				}
 			}
 
-			append_hydration(header, t1);
+			append_hydration(header, t2);
 			append_hydration(header, div1);
 			append_hydration(div1, a1);
 			if (if_block1) if_block1.m(a1, null);
-			append_hydration(div1, t2);
+			append_hydration(div1, t3);
 			append_hydration(div1, button);
 			mount_component(icon, button, null);
-			append_hydration(div1, t3);
+			append_hydration(div1, t4);
 			if (if_block2) if_block2.m(div1, null);
 			current = true;
 
@@ -3425,6 +3437,14 @@ function create_fragment$2(ctx) {
 			}
 		},
 		p(ctx, [dirty]) {
+			if (!current || dirty & /*logo*/ 1 && !src_url_equal(img.src, img_src_value = /*logo*/ ctx[0].image.url)) {
+				attr(img, "src", img_src_value);
+			}
+
+			if (!current || dirty & /*logo*/ 1 && img_alt_value !== (img_alt_value = /*logo*/ ctx[0].image.alt)) {
+				attr(img, "alt", img_alt_value);
+			}
+
 			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block0) {
 				if_block0.p(ctx, dirty);
 			} else {
@@ -3750,7 +3770,7 @@ function create_fragment$4(ctx) {
 			append_hydration(button, t6);
 
 			if (!mounted) {
-				dispose = listen(form_1, "submit", prevent_default(/*submit_handler*/ ctx[3]));
+				dispose = listen(form_1, "submit", prevent_default(/*submit_handler*/ ctx[4]));
 				mounted = true;
 			}
 		},
@@ -3773,24 +3793,27 @@ function instance$3($$self, $$props, $$invalidate) {
 	let { heading } = $$props;
 	let { body } = $$props;
 	let { form } = $$props;
+	let { hin } = $$props;
 
 	const submit_handler = ({ target }) => {
 		const data = new FormData(target); // send `data` to email service
+		console.log('>>>>', data);
 	};
 
 	$$self.$$set = $$props => {
 		if ('heading' in $$props) $$invalidate(0, heading = $$props.heading);
 		if ('body' in $$props) $$invalidate(1, body = $$props.body);
 		if ('form' in $$props) $$invalidate(2, form = $$props.form);
+		if ('hin' in $$props) $$invalidate(3, hin = $$props.hin);
 	};
 
-	return [heading, body, form, submit_handler];
+	return [heading, body, form, hin, submit_handler];
 }
 
 class Component$4 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$3, create_fragment$4, safe_not_equal, { heading: 0, body: 1, form: 2 });
+		init(this, options, instance$3, create_fragment$4, safe_not_equal, { heading: 0, body: 1, form: 2, hin: 3 });
 	}
 }
 
@@ -5160,7 +5183,8 @@ function create_fragment$b(ctx) {
 				form: {
 					"input_label": "Email Address",
 					"submit_label": "Submit"
-				}
+				},
+				hin: "Consequat adipisicing ad"
 			}
 		});
 
